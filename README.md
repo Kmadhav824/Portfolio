@@ -1,15 +1,45 @@
-# React + TypeScript + Vite
+# Portfolio - React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal portfolio project! 🚀
 
-Currently, two official plugins are available:
+This project is a modern, responsive web application built using **React**, **TypeScript**, and **Vite**. It serves as a showcase for my skills, experience, and projects as a web developer.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Project Overview
 
-## Expanding the ESLint configuration
+- **Live Preview:** [your-live-demo-link-if-any]
+- **Purpose:** The portfolio demonstrates my coding abilities, creative projects, and provides an overview of my professional background.
+- **Features:**
+  - Home, About Me, Projects, Contact sections
+  - Responsive design for mobile and desktop
+  - Interactive UI elements and smooth navigation
+  - Showcases featured work and skills
+  - Contact form for collaborating or networking
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tech Stack
+
+- **Frontend:** React + TypeScript
+- **Build Tool:** Vite
+- **Styling:** [e.g. Tailwind CSS, styled-components, CSS Modules]
+- **Linting:** ESLint (with recommended rules for React and TypeScript)
+
+## Getting Started
+
+To run locally:
+
+```bash
+git clone https://github.com/Kmadhav824/Portfolio.git
+cd Portfolio
+npm install
+npm run dev
+```
+
+## Customization
+
+You can easily customize sections (like projects and experience) by editing relevant React components.
+
+## ESLint Setup
+
+This template has a basic ESLint setup and provides guidance for enabling type-aware lint rules. For production apps, you can expand the configuration as follows:
 
 ```js
 export default tseslint.config([
@@ -17,53 +47,26 @@ export default tseslint.config([
   {
     files: ['**/*.{ts,tsx}'],
     extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
       ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
       ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
       ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
     ],
     languageOptions: {
       parserOptions: {
         project: ['./tsconfig.node.json', './tsconfig.app.json'],
         tsconfigRootDir: import.meta.dirname,
       },
-      // other options...
     },
   },
 ])
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for enhanced linting.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Credits
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Built and maintained by [Kmadhav824](https://github.com/Kmadhav824).
+
+---
+
+Feel free to use this template for your own portfolio, and share your feedback or suggestions!
