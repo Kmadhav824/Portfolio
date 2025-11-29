@@ -54,7 +54,7 @@ const About = () => {
           <div className="relative">
             <div className="relative z-10">
               <img 
-                src="src\assets\Images\coder.jpg"
+                src="\Images\coder.jpg"
                 alt="Image"
                 className="rounded-2xl shadow-2xl"
               />
