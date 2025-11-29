@@ -29,14 +29,6 @@ const Projects = () => {
       liveUrl: "https://example.com"
     },
     {
-      title: "Weather Dashboard",
-      description: "An interactive weather dashboard that displays current conditions and forecasts for multiple cities. Features include location search, data visualization, and responsive design.",
-      image: "https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
-      technologies: ["JavaScript", "Chart.js", "OpenWeather API", "CSS Grid"],
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com"
-    },
-    {
       title: "Blog Platform",
       description: "A modern blog platform with content management system, user authentication, and SEO optimization. Built with Next.js and headless CMS integration.",
       image: "https://images.pexels.com/photos/261628/pexels-photo-261628.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",

@@ -19,11 +19,6 @@ const Interests = () => {
       title: "Cricket",
       description: "Playing cricket, subject to team availability"
     },
-    {
-      icon: <Code2 size={24} />,
-      title: "Open Source",
-      description: "Contributing to open source projects and learning from the community"
-    }
   ];
 
   return (

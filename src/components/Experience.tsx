@@ -15,30 +15,6 @@ const Experience = () => {
         "Participated in daily stand-ups and sprint planning meetings"
       ]
     },
-    {
-      title: "Full-Stack Developer Intern",
-      company: "StartupXYZ",
-      location: "Remote",
-      duration: "Jan 2023 - May 2023",
-      description: [
-        "Built RESTful APIs using Node.js and Express framework",
-        "Implemented user authentication and authorization systems",
-        "Worked with PostgreSQL database design and optimization",
-        "Contributed to agile development process and code reviews"
-      ]
-    },
-    {
-      title: "Web Development Intern",
-      company: "Digital Agency Pro",
-      location: "New York, NY",
-      duration: "Jun 2022 - Aug 2022",
-      description: [
-        "Created custom WordPress themes and plugins for clients",
-        "Developed landing pages with focus on conversion optimization",
-        "Learned modern CSS frameworks and responsive design principles",
-        "Assisted in client communication and project management"
-      ]
-    }
   ];
 
   return (
