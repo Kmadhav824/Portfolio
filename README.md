@@ -6,7 +6,7 @@ This project is a modern, responsive web application built using **React**, **Ty
 
 ## Project Overview
 
-- **Live Preview:** [your-live-demo-link-if-any]
+- **Live Preview:** https://portfolio-gilt-ten-7y11irjwxn.vercel.app/
 - **Purpose:** The portfolio demonstrates my coding abilities, creative projects, and provides an overview of my professional background.
 - **Features:**
   - Home, About Me, Projects, Contact sections
