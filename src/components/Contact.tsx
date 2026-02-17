@@ -1,5 +1,9 @@
+import emailjs from '@emailjs/browser';
+
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Send } from 'lucide-react';
+import.meta.env
+
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -19,11 +23,26 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission here
-    console.log('Form submitted:', formData);
-    // Reset form
-    setFormData({ name: '', email: '', subject: '', message: '' });
-    alert('Thank you for your message! I\'ll get back to you soon.');
-  };
+    emailjs.send(
+    import.meta.env.VITE_EMAILJS_SERVICE_ID,
+    import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+    formData,
+    import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    )
+    .then(() => {
+      alert("Message sent successfully!");
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    })
+    .catch((error) => {
+      console.error(error);
+      alert("Failed to send message");
+    });
+      console.log('Form submitted:', formData);
+      // Reset form
+      setFormData({ name: '', email: '', subject: '', message: '' });
+      alert('Thank you for your message! I\'ll get back to you soon.');
+    };
+
 
   return (
     <section id="contact" className="py-20 bg-gray-50">
