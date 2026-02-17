@@ -15,6 +15,20 @@ const Experience = () => {
         "Participated in daily stand-ups and sprint planning meetings"
       ]
     },
+    {
+      title: "Open Source Contributor",
+      company: "GitHub Community",
+      location: "Remote",
+      duration: "2026 - Present",
+      description: [
+        "Contributing to open-source repositories by resolving issues and submitting pull requests",
+        "Strong understanding of Git workflows including branching, rebasing, and version control",
+        "Collaborating with global developers through code reviews and discussions",
+        "Maintaining clean commit history and following best practices for contribution",
+        "Continuously learning and improving through community-driven development"
+      ]
+    }
+
   ];
 
   return (

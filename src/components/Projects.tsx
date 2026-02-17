@@ -9,49 +9,57 @@ const Projects = () => {
       // Coding/Programming themed image
       image: "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop", 
       technologies: ["React", "Node.js", "MongoDB", "Express"],
-      githubUrl: "https://github.com/shivamxverma/CodeSM/",
+      githubUrl: "https://github.com/Kmadhav824/CodeSM",
       liveUrl: "https://code-sm.vercel.app/"
     },
-    {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution built with React, Node.js, and PostgreSQL. Features include user authentication, product catalog, shopping cart, and payment integration.",
-      image: "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
-      technologies: ["React", "Node.js", "PostgreSQL", "Stripe"],
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com"
-    },
-    {
-      title: "Task Management App",
-      description: "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features. Built using React and Firebase.",
-      image: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
-      technologies: ["React", "Firebase", "Tailwind CSS", "TypeScript"],
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com"
-    },
-    {
-      title: "Blog Platform",
-      description: "A modern blog platform with content management system, user authentication, and SEO optimization. Built with Next.js and headless CMS integration.",
-      image: "https://images.pexels.com/photos/261628/pexels-photo-261628.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
-      technologies: ["Next.js", "Sanity CMS", "Vercel", "SEO"],
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com"
-    },
+    // {
+    //   title: "E-Commerce Platform",
+    //   description: "A full-stack e-commerce solution built with React, Node.js, and PostgreSQL. Features include user authentication, product catalog, shopping cart, and payment integration.",
+    //   image: "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
+    //   technologies: ["React", "Node.js", "PostgreSQL", "Stripe"],
+    //   githubUrl: "https://github.com",
+    //   liveUrl: "https://example.com"
+    // },
+    // {
+    //   title: "Task Management App",
+    //   description: "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features. Built using React and Firebase.",
+    //   image: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
+    //   technologies: ["React", "Firebase", "Tailwind CSS", "TypeScript"],
+    //   githubUrl: "https://github.com",
+    //   liveUrl: "https://example.com"
+    // },
+    // {
+    //   title: "Blog Platform",
+    //   description: "A modern blog platform with content management system, user authentication, and SEO optimization. Built with Next.js and headless CMS integration.",
+    //   image: "https://images.pexels.com/photos/261628/pexels-photo-261628.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
+    //   technologies: ["Next.js", "Sanity CMS", "Vercel", "SEO"],
+    //   githubUrl: "https://github.com",
+    //   liveUrl: "https://example.com"
+    // },
     {
       title: "Portfolio Website",
       description: "A responsive portfolio website showcasing my projects and skills. Features smooth animations, dark mode toggle, and optimized performance.",
       image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
       technologies: ["React", "Tailwind CSS", "Framer Motion", "Vite"],
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com"
+      githubUrl: "https://github.com/Kmadhav824/portfolio",
     },
+    // {
+    //   title: "Chat Application",
+    //   description: "Real-time chat application with multiple rooms, file sharing, and emoji support. Built using Socket.io for real-time communication.",
+    //   image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
+    //   technologies: ["Socket.io", "Express", "MongoDB", "React"],
+    //   githubUrl: "https://github.com",
+    //   liveUrl: "https://example.com"
+    // },
     {
-      title: "Chat Application",
-      description: "Real-time chat application with multiple rooms, file sharing, and emoji support. Built using Socket.io for real-time communication.",
+      title: "Werce (Vercel Clone)",
+      description: "A Vercel-like deployment platform with real-time updates, CI/CD integration, and multi-environment support.",
       image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
-      technologies: ["Socket.io", "Express", "MongoDB", "React"],
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com"
+      technologies: ["Next.js", "Tailwind CSS", "TypeScript", "Vercel"],
+      githubUrl: "https://github.com/Kmadhav824/wercel-bundle",
+      liveUrl: "Coming Soon - Stay Tuned!"
     }
+
   ];
 
   return (
