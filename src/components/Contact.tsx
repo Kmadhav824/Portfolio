@@ -68,7 +68,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-gray-900 font-medium">Email</p>
-                    <p className="text-gray-600">kmadhav824@gmail.com</p>
+                    <p className="text-gray-600">kmadhav824.second@gmail.com</p>
                   </div>
                 </div>
                 
@@ -100,7 +100,7 @@ const Contact = () => {
                 <a href="https://github.com/Kmadhav824" className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors duration-300 transform hover:scale-110">
                   <Github className="text-white" size={20} />
                 </a>
-                <a href="www.linkedin.com/in/kumar-madhav" className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-500 transition-colors duration-300 transform hover:scale-110">
+                <a href="https://www.linkedin.com/in/kmadhav824" className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-500 transition-colors duration-300 transform hover:scale-110">
                   <Linkedin className="text-white" size={20} />
                 </a>
                 <a href="https://x.com/kmadhav824" className="w-12 h-12 bg-blue-400 rounded-full flex items-center justify-center hover:bg-blue-300 transition-colors duration-300 transform hover:scale-110">

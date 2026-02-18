@@ -10,7 +10,6 @@ const Skills = () => {
         "JavaScript / Node.js",
         "Python",
         "SQL",
-        "Kotlin"
       ]
     },
     {

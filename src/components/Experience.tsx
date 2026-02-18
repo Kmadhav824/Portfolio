@@ -10,14 +10,14 @@ const Experience = () => {
       duration: "Sep 2024 - Oct 2024",
       description: [
         "Learnt Networking Concepts, Vulnerability and Ethical Concerns",
-        "Got hands on experience using Advanced Virtual Lab p",
-        "Improved application performance by 30% through code optimization",
-        "Participated in daily stand-ups and sprint planning meetings"
+        "Got hands on experience using Advanced Virtual Lab environments for simulating real-world cyber attack scenarios",
+        "simulated SQL Injection, Cross-Site Scripting (XSS), and other common attack vectors",
+        "Conducted vulnerability assessments and penetration tests on web applications and network infrastructures",
       ]
     },
     {
       title: "Open Source Contributor",
-      company: "GitHub Community",
+      company: "cal.com",
       location: "Remote",
       duration: "2026 - Present",
       description: [
