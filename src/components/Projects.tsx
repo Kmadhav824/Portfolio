@@ -7,7 +7,7 @@ const Projects = () => {
       title: "CodeSM",
       description: "A comprehensive coding platform designed for creating and solving programming problems. Features include a code execution engine, problem setting tools, and user leaderboards.",
       // Coding/Programming themed image
-      image: "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop", 
+      image: "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
       technologies: ["React", "Node.js", "MongoDB", "Express"],
       githubUrl: "https://github.com/Kmadhav824/CodeSM",
       liveUrl: "https://code-sm.vercel.app/"
@@ -52,12 +52,12 @@ const Projects = () => {
     //   liveUrl: "https://example.com"
     // },
     {
-      title: "Werce (Vercel Clone)",
+      title: "Nexus",
       description: "A Vercel-like deployment platform with real-time updates, CI/CD integration, and multi-environment support.",
       image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
-      technologies: ["Next.js", "Tailwind CSS", "TypeScript", "Vercel"],
+      technologies: ["Next.js", "Tailwind CSS", "TypeScript", "Git & Github"],
       githubUrl: "https://github.com/Kmadhav824/wercel-bundle",
-      liveUrl: "Coming Soon - Stay Tuned!"
+      liveUrl: "https://nexus-kmadhav.vercel.app/"
     }
 
   ];
@@ -72,26 +72,26 @@ const Projects = () => {
             A collection of projects that showcase my skills and passion for development
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <div key={index} className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
               <div className="relative overflow-hidden">
-                <img 
-                  src={project.image} 
+                <img
+                  src={project.image}
                   alt={project.title}
                   className="w-full h-48 object-cover transition-transform duration-300 hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
               </div>
-              
+
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">{project.title}</h3>
                 <p className="text-gray-600 mb-4 text-sm leading-relaxed">{project.description}</p>
-                
+
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech, techIndex) => (
-                    <span 
+                    <span
                       key={techIndex}
                       className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-medium"
                     >
@@ -99,16 +99,16 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
-                
+
                 <div className="flex space-x-4">
-                  <a 
+                  <a
                     href={project.githubUrl}
                     className="flex items-center space-x-2 text-gray-600 hover:text-blue-600 transition-colors duration-200"
                   >
                     <Github size={16} />
                     <span className="text-sm">Code</span>
                   </a>
-                  <a 
+                  <a
                     href={project.liveUrl}
                     className="flex items-center space-x-2 text-gray-600 hover:text-blue-600 transition-colors duration-200"
                   >
