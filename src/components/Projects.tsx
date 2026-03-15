@@ -57,7 +57,7 @@ const Projects = () => {
       image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
       technologies: ["Next.js", "Tailwind CSS", "TypeScript", "Git & Github"],
       githubUrl: "https://github.com/Kmadhav824/wercel-bundle",
-      liveUrl: "https://nexus-kmadhav.vercel.app/"
+      liveUrl: "https://wercel-frontend.vercel.app/"
     }
 
   ];

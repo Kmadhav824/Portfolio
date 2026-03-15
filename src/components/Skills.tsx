@@ -6,8 +6,9 @@ const Skills = () => {
     {
       title: "Programming Languages",
       skills: [
-        "C++ (Competitive Programming)",
         "JavaScript / Node.js",
+        "TypeScript",
+        "C++ (Competitive Programming)",
         "Python",
         "SQL",
       ]
@@ -15,10 +16,11 @@ const Skills = () => {
     {
       title: "Core & Security",
       skills: [
-        "Cryptography (Post-Quantum)",
+        "Object-Oriented Programming (OOP)",
         "Network Security",
         "Data Structures & Algorithms",
         "Database Management (DBMS)",
+        "Cryptography (Post-Quantum)",
         "Ethical Hacking"
       ]
     },
@@ -29,9 +31,12 @@ const Skills = () => {
         "React.js",
         "Git & GitHub",
         "Linux Environment",
+        "Docker",
+        "CI/CD Pipelines",
+        "AWS & Cloud Services"
       ]
-    }
-  ];
+    },
+      ];
 
   return (
     <section id="skills" className="py-20 bg-gray-50">
