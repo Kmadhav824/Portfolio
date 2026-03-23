@@ -37,11 +37,12 @@ const Projects = () => {
     //   liveUrl: "https://example.com"
     // },
     {
-      title: "Portfolio Website",
-      description: "A responsive portfolio website showcasing my projects and skills. Features smooth animations, dark mode toggle, and optimized performance.",
+      title: "QuicPulse",
+      description: "A polling platform for creating and managing polls with real-time results and voting functionality.",
       image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
       technologies: ["React", "Tailwind CSS", "Framer Motion", "Vite"],
-      githubUrl: "https://github.com/Kmadhav824/portfolio",
+      githubUrl: "https://github.com/Kmadhav824/QuicPulse",
+      liveUrl: "https://quickpulse-app.vercel.app/"
     },
     // {
     //   title: "Chat Application",
