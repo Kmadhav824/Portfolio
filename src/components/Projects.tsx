@@ -1,5 +1,5 @@
-import React from 'react';
 import { ExternalLink, Github } from 'lucide-react';
+import quickpulseImage from '../assets/quickpulse.jpg';
 
 const Projects = () => {
   const projects = [
@@ -37,11 +37,11 @@ const Projects = () => {
     //   liveUrl: "https://example.com"
     // },
     {
-      title: "QuicPulse",
+      title: "QuickPulse",
       description: "A polling platform for creating and managing polls with real-time results and voting functionality.",
-      image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
+      image: quickpulseImage,
       technologies: ["React", "Tailwind CSS", "Framer Motion", "Vite"],
-      githubUrl: "https://github.com/Kmadhav824/QuicPulse",
+      githubUrl: "https://github.com/Kmadhav824/quickpulse-app",
       liveUrl: "https://quickpulse-app.vercel.app/"
     },
     // {
