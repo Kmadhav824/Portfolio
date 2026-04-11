@@ -1,3 +1,498 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ============================================
+   DESIGN TOKENS
+   ============================================ */
+:root {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Color Palette */
+  --bg-base: #050810;
+  --bg-surface: #0d1117;
+  --bg-elevated: #161b27;
+  --bg-card: rgba(22, 27, 39, 0.8);
+
+  --accent-primary: #6366f1;     /* indigo */
+  --accent-secondary: #8b5cf6;   /* violet */
+  --accent-tertiary: #ec4899;    /* pink */
+  --accent-cyan: #06b6d4;
+
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-muted: #475569;
+
+  --border-subtle: rgba(99, 102, 241, 0.12);
+  --border-glow: rgba(99, 102, 241, 0.35);
+
+  --glow-primary: rgba(99, 102, 241, 0.4);
+  --glow-secondary: rgba(139, 92, 246, 0.3);
+}
+
+/* ============================================
+   BASE RESET & GLOBAL
+   ============================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  cursor: none;
+}
+
+/* Custom cursor areas for non-interactive */
+a, button, [role="button"] {
+  cursor: none;
+}
+
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+/* ============================================
+   SCROLL PROGRESS BAR
+   ============================================ */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary), var(--accent-tertiary));
+  z-index: 9999;
+  transform-origin: left;
+}
+
+/* ============================================
+   CUSTOM CURSOR
+   ============================================ */
+.cursor-dot {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background: var(--accent-primary);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99999;
+  transition: transform 0.1s ease;
+  mix-blend-mode: screen;
+}
+
+.cursor-ring {
+  position: fixed;
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid rgba(99, 102, 241, 0.6);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99998;
+  transition: transform 0.08s ease, width 0.2s ease, height 0.2s ease, opacity 0.2s ease;
+}
+
+.cursor-ring.hovering {
+  width: 52px;
+  height: 52px;
+  border-color: var(--accent-tertiary);
+  opacity: 0.7;
+}
+
+/* ============================================
+   GLASS MORPHISM
+   ============================================ */
+.glass {
+  background: rgba(22, 27, 39, 0.6);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid var(--border-subtle);
+}
+
+.glass-strong {
+  background: rgba(22, 27, 39, 0.85);
+  backdrop-filter: blur(24px) saturate(200%);
+  -webkit-backdrop-filter: blur(24px) saturate(200%);
+  border: 1px solid rgba(99, 102, 241, 0.18);
+}
+
+/* ============================================
+   GLOW EFFECTS
+   ============================================ */
+.glow-primary {
+  box-shadow: 0 0 30px var(--glow-primary), 0 0 60px rgba(99, 102, 241, 0.15);
+}
+
+.glow-text {
+  text-shadow: 0 0 30px var(--glow-primary), 0 0 60px rgba(139, 92, 246, 0.3);
+}
+
+/* ============================================
+   GRADIENT UTILITIES
+   ============================================ */
+.gradient-text {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-cyan {
+  background: linear-gradient(135deg, #06b6d4 0%, #6366f1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-border {
+  position: relative;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6, #ec4899);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* ============================================
+   SECTION LAYOUT
+   ============================================ */
+.section-dark {
+  background: var(--bg-surface);
+  position: relative;
+}
+
+.section-darker {
+  background: var(--bg-base);
+  position: relative;
+}
+
+/* ============================================
+   GRID NOISE TEXTURE
+   ============================================ */
+.noise-bg {
+  position: relative;
+}
+
+.noise-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ============================================
+   ANIMATED GRID BACKGROUND
+   ============================================ */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(99, 102, 241, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(99, 102, 241, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* ============================================
+   TERMINAL STYLES
+   ============================================ */
+.terminal {
+  font-family: var(--font-mono);
+  background: #0a0e1a;
+  border: 1px solid rgba(99, 102, 241, 0.25);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.terminal-header {
+  background: #111827;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid rgba(99, 102, 241, 0.15);
+}
+
+.terminal-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.terminal-body {
+  padding: 16px;
+  min-height: 280px;
+  max-height: 400px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #374151 transparent;
+}
+
+.terminal-body::-webkit-scrollbar {
+  width: 4px;
+}
+
+.terminal-body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.terminal-body::-webkit-scrollbar-thumb {
+  background: #374151;
+  border-radius: 2px;
+}
+
+.terminal-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 4px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.terminal-prompt {
+  color: #6366f1;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+.terminal-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #f1f5f9;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  flex: 1;
+  caret-color: #6366f1;
+}
+
+.terminal-output {
+  color: #94a3b8;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.terminal-success {
+  color: #34d399;
+}
+
+.terminal-error {
+  color: #f87171;
+}
+
+.terminal-accent {
+  color: #818cf8;
+}
+
+.terminal-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 16px;
+  background: #6366f1;
+  animation: blink 1.2s step-end infinite;
+  vertical-align: middle;
+  margin-left: 2px;
+  border-radius: 1px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* ============================================
+   PROJECT CARD TILT
+   ============================================ */
+.project-card {
+  transform-style: preserve-3d;
+  transition: box-shadow 0.3s ease;
+  will-change: transform;
+}
+
+.project-card:hover {
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.5),
+    0 0 30px rgba(99, 102, 241, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.07);
+}
+
+/* ============================================
+   SKILL TAG / BADGE ANIMATIONS
+   ============================================ */
+.skill-tag {
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.skill-tag:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.35);
+}
+
+/* ============================================
+   MAGNETIC BUTTON
+   ============================================ */
+.btn-magnetic {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.15s ease;
+}
+
+.btn-magnetic::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.btn-magnetic:hover::before {
+  opacity: 1;
+}
+
+/* ============================================
+   SHIMMER LOADING
+   ============================================ */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.05) 50%,
+    rgba(255,255,255,0) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2.5s infinite;
+}
+
+/* ============================================
+   FLOATING ORBS
+   ============================================ */
+@keyframes float-orb-1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -40px) scale(1.05); }
+  66% { transform: translate(-20px, 20px) scale(0.97); }
+}
+
+@keyframes float-orb-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-25px, 30px) scale(1.03); }
+  66% { transform: translate(35px, -20px) scale(0.98); }
+}
+
+.orb-1 { animation: float-orb-1 15s ease-in-out infinite; }
+.orb-2 { animation: float-orb-2 18s ease-in-out infinite; }
+
+/* ============================================
+   TYPING CURSOR
+   ============================================ */
+.typing-cursor {
+  display: inline-block;
+  width: 3px;
+  height: 1em;
+  background: #6366f1;
+  margin-left: 2px;
+  vertical-align: middle;
+  animation: blink 1s step-end infinite;
+  border-radius: 1px;
+}
+
+/* ============================================
+   TIMELINE
+   ============================================ */
+.timeline-line {
+  background: linear-gradient(to bottom, #6366f1, #8b5cf6, #ec4899);
+}
+
+/* ============================================
+   SCROLLBAR
+   ============================================ */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg-base); }
+::-webkit-scrollbar-thumb { background: #374151; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #6366f1; }
+
+/* ============================================
+   SELECTION
+   ============================================ */
+::selection {
+  background: rgba(99, 102, 241, 0.3);
+  color: white;
+}
+
+/* ============================================
+   RESPONSIVE HELPERS
+   ============================================ */
+@media (max-width: 768px) {
+  body { cursor: auto; }
+  .cursor-dot, .cursor-ring { display: none; }
+  a, button, [role="button"] { cursor: pointer; }
+}
+
+/* ============================================
+   FOCUS VISIBLE
+   ============================================ */
+:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ============================================
+   REDUCED MOTION
+   ============================================ */
+/* ============================================
+   INPUT AUTOFILL — force dark bg
+   Chrome injects its own white/yellow bg on autocomplete
+   ============================================ */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  -webkit-text-fill-color: #e2e8f0 !important;
+  -webkit-box-shadow: 0 0 0px 1000px #0d1117 inset !important;
+  box-shadow: 0 0 0px 1000px #0d1117 inset !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  caret-color: #e2e8f0;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* ============================================
+   REDUCED MOTION
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
